@@ -342,13 +342,19 @@ function showFailModal(msg) {
   try { sounds.fail.currentTime = 0; sounds.fail.play(); } catch {}
   const dlg = $('#modal');
   $('#modalTitle').textContent = 'Ошибка';
-  $('#modalBody').innerHTML = `<p>${msg}</p><img src="img/fail.png" alt="fail" style="max-width:120px">`;
+  $('#modalBody').innerHTML = `
+    <p>${msg}</p>
+    <img src="img/fail.png" alt="fail" style="max-width:120px">
+    <div class="modal-actions"><button id="okBtn" class="btn primary">Ок</button></div>
+  `;
   dlg.showModal();
 
-  dlg.querySelector('form').onsubmit = () => {
+  // ✅ обработчик кнопки вместо формы
+  dlg.querySelector('#okBtn').addEventListener('click', () => {
+    dlg.close();
     state.rabbit = { ...state.start };
     renderBoard();
-  };
+  });
 }
 
 function showWinModal(final) {
@@ -361,22 +367,24 @@ function showWinModal(final) {
     $('#modalBody').innerHTML = `
       <p>Ты прошёл все уровни!</p>
       <img src="img/trophy.png" alt="trophy">
+      <div class="modal-actions"><button id="okBtn" class="btn primary">Ок</button></div>
     `;
   } else {
     $('#modalTitle').textContent = 'Молодец!';
     $('#modalBody').innerHTML = `
       <p>Уровень пройден!</p>
       <img src="img/success.gif" alt="success">
+      <div class="modal-actions"><button id="okBtn" class="btn primary">Ок</button></div>
     `;
   }
 
   dlg.showModal();
 
-  dlg.querySelector('form').onsubmit = () => {
-    if (!final) {
-      loadLevel(currentLevel + 1);
-    }
-  };
+  // ✅ кнопка вместо формы
+  dlg.querySelector('#okBtn').addEventListener('click', () => {
+    dlg.close();
+    if (!final) loadLevel(currentLevel + 1);
+  });
 }
 
 /* ============ Кнопки/Старт ============ */
