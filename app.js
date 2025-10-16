@@ -9,7 +9,7 @@ const EMOJI = {
   E: 'img/door.png',
   C: 'img/carrot.png',
   W: 'img/wall.png',
-  '.': null          // ⬅️ пустую клетку не рисуем картинкой
+  '.': 'img/empty2.png'
 };
 
 // звуки (проверь пути и файлы)
@@ -122,12 +122,12 @@ function renderBoard() {
 
       // сначала фон клетки (пол или стена/морковь/дверь)
         // вместо "if (EMOJI[ch]) { ... }"
-       if (ch !== '.' && EMOJI[ch]) {
+      if (EMOJI[ch]) {
          const imgBG = document.createElement('img');
          imgBG.src = EMOJI[ch];
          imgBG.className = 'sprite';
          cellDiv.appendChild(imgBG);
-       }
+      }
 
       // поверх — сам кролик, если он в этой клетке
       if (x === state.rabbit.x && y === state.rabbit.y) {
