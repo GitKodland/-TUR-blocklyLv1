@@ -20,12 +20,12 @@
     <div class="actions">
       <button id="runBtn" class="btn primary">Запустить ▶</button>
       <button id="resetBtn" class="btn">Сброс ⟲</button>
-      <!--<button id="hintBtn" class="btn outline">Подсказка 💡</button> -->
+      <!-- <button id="hintBtn" class="btn outline">Подсказка 💡</button> -->
     </div>
   </header>
 
   <main class="layout">
-    <!-- Правая часть — игровое поле -->
+    <!-- Левая часть — игровое поле -->
     <section class="board-wrap">
       <div style="position: relative; width: 100%; max-width: 640px; margin: 0 auto;">
         <div id="board" class="board"></div>
@@ -42,21 +42,22 @@
       <div id="goal" class="goal"></div>
     </section>
 
-    <!-- Левая часть — Blockly -->
+    <!-- Правая часть — Blockly -->
     <section class="work-wrap">
       <div id="blockly" class="blockly"></div>
       <div class="limit">Блоков: <span id="used">0</span>/<span id="limit">0</span></div>
     </section>
   </main>
 
-    <dialog id="modal">
-      <h3 id="modalTitle">Подсказка</h3>
-      <div id="modalBody"></div>
-      <div class="modal-actions"></div>
-    </dialog
+  <!-- ✅ исправлено: закрыт тег dialog -->
+  <dialog id="modal">
+    <h3 id="modalTitle">Подсказка</h3>
+    <div id="modalBody"></div>
+    <div class="modal-actions"></div>
+  </dialog>
 
   <footer class="footer">
-    Сделано с ❤️ для Kodland · разработчик: <strong>Andrei Pabiarzhyn</strong> · © 2025
+    Сделано с ❤️ для <strong>Kodland</strong> · разработчик: <strong>Andrei Pabiarzhyn</strong> · © 2025
   </footer>
 
   <!-- Скрипты -->
