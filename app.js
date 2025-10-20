@@ -56,7 +56,7 @@ function loadLevel(idx) {
 
   currentLevel = idx;
   const L = LEVELS_RABBIT[idx];
-  $('#levelTitle').textContent = `Уровень ${idx + 1}/${LEVELS_RABBIT.length}`;
+  $('#levelTitle').textContent = `Level ${idx + 1}/${LEVELS_RABBIT.length}`;
   $('#limit').textContent = L.maxBlocks;
   $('#used').textContent = 0;
 
@@ -170,7 +170,7 @@ function canUseMoreBlocks() {
 async function run() {
   if (state.running) return;
   if (!canUseMoreBlocks()) {
-    showFailModal('Слишком много блоков!');
+    showFailModal('Too many blocks!');
     return;
   }
   compile();
@@ -194,7 +194,7 @@ async function run() {
     if (cmd === 'move') {
       const ok = await step(arg);
       if (!ok) {
-        showFailModal('Ты упёрся в стену или вышел за поле!');
+        showFailModal('You’ve hit a wall or gone out of bounds!');
         state.running = false;
         return;
       }
@@ -211,7 +211,7 @@ async function run() {
   // проверяем победу
   const won = checkWin();
   if (!won) {
-    showFailModal('Попробуй ещё раз!');
+    showFailModal('Try again!');
     // сбросим кролика и морковки
     state.rabbit = { ...state.start };
     state.grid = state.original.map(row => [...row]);
@@ -253,7 +253,7 @@ async function takeCarrot() {
     renderBoard();
     return true;
   } else {
-    showFailModal('Здесь нет морковки! 🥕❌');
+    showFailModal('There is no carrot here! 🥕❌');
     return false;
   }
 }
@@ -276,7 +276,7 @@ function checkWin() {
     }
     return true;
   } else if (atExit && needCarrots && !allCarrots) {
-    showFailModal('Собери все морковки!');
+    showFailModal('Collect all carrots!');
     return false;
   }
   return false;
@@ -341,11 +341,11 @@ function exitFX(cx, cy) {
 function showFailModal(msg) {
   try { sounds.fail.currentTime = 0; sounds.fail.play(); } catch {}
   const dlg = $('#modal');
-  $('#modalTitle').textContent = 'Ошибка';
+  $('#modalTitle').textContent = 'Mistake!';
   $('#modalBody').innerHTML = `
     <p>${msg}</p>
     <img src="img/fail.png" alt="fail" style="max-width:120px">
-    <div class="modal-actions"><button id="okBtn" class="btn primary">Ок</button></div>
+    <div class="modal-actions"><button id="okBtn" class="btn primary">Ok</button></div>
   `;
   dlg.showModal();
 
@@ -363,18 +363,18 @@ function showWinModal(final) {
 
   if (final) {
     dlg.classList.add('win-final');
-    $('#modalTitle').textContent = 'Поздравляем! 🏆';
+    $('#modalTitle').textContent = 'Congratulations! 🏆';
     $('#modalBody').innerHTML = `
-      <p>Ты прошёл все уровни!</p>
+      <p>You've completed all the levels!</p>
       <img src="img/trophy.png" alt="trophy">
-      <div class="modal-actions"><button id="okBtn" class="btn primary">Ок</button></div>
+      <div class="modal-actions"><button id="okBtn" class="btn primary">Ok</button></div>
     `;
   } else {
-    $('#modalTitle').textContent = 'Молодец!';
+    $('#modalTitle').textContent = 'Good job!';
     $('#modalBody').innerHTML = `
-      <p>Уровень пройден!</p>
+      <p>The level is completed!</p>
       <img src="img/success.gif" alt="success">
-      <div class="modal-actions"><button id="okBtn" class="btn primary">Ок</button></div>
+      <div class="modal-actions"><button id="okBtn" class="btn primary">Ok</button></div>
     `;
   }
 
