@@ -1,5 +1,5 @@
 const LEVELS_RABBIT = [
-  // === 1–5: только выход ===
+  // === 1–5: only exit ===
   {
     size: 5,
     grid: [
@@ -71,7 +71,7 @@ const LEVELS_RABBIT = [
     hint: "Move in a zigzag down and to the left."
   },
 
-  // === 6–10: морковки + выход ===
+  // === 6–10: carrots + exit ===
   {
     size: 5,
     grid: [
