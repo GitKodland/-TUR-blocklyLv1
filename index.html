@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,13 +13,13 @@
   <header class="topbar">
     <div class="brand">🐰 Rabbit Run</div>
     <div class="level-info">
-      <button id="prevLevel" class="btn" title="Предыдущий">◀</button>
-      <span id="levelTitle">Уровень 1/10</span>
-      <button id="nextLevel" class="btn" title="Следующий">▶</button>
+      <button id="prevLevel" class="btn" title="Previous">◀</button>
+      <span id="levelTitle">Level 1/10</span>
+      <button id="nextLevel" class="btn" title="Next">▶</button>
     </div>
     <div class="actions">
-      <button id="runBtn" class="btn primary">Запустить ▶</button>
-      <button id="resetBtn" class="btn">Сброс ⟲</button>
+      <button id="runBtn" class="btn primary">Launch ▶</button>
+      <button id="resetBtn" class="btn">Reset ⟲</button>
       <!-- <button id="hintBtn" class="btn outline">Подсказка 💡</button> -->
     </div>
   </header>
@@ -33,11 +33,11 @@
         <canvas id="fxCanvas"></canvas>
       </div>
       <div id="legend" class="legend">
-        <span>🐰 — кролик</span>
-        <span>🚪 — выход</span>
-        <span>🥕 — морковка</span>
-        <span>🧱 — стена</span>
-        <span>▫️ — пусто</span>
+        <span>🐰 — rabbit</span>
+        <span>🚪 — exit</span>
+        <span>🥕 — carrot</span>
+        <span>🧱 — wall</span>
+        <span>▫️ — empty</span>
       </div>
       <div id="goal" class="goal"></div>
     </section>
@@ -45,19 +45,19 @@
     <!-- Правая часть — Blockly -->
     <section class="work-wrap">
       <div id="blockly" class="blockly"></div>
-      <div class="limit">Блоков: <span id="used">0</span>/<span id="limit">0</span></div>
+      <div class="limit">Blocks used: <span id="used">0</span>/<span id="limit">0</span></div>
     </section>
   </main>
 
   <!-- ✅ исправлено: закрыт тег dialog -->
   <dialog id="modal">
-    <h3 id="modalTitle">Подсказка</h3>
+    <h3 id="modalTitle">Hint</h3>
     <div id="modalBody"></div>
     <div class="modal-actions"></div>
   </dialog>
 
   <footer class="footer">
-    Сделано с ❤️ для <strong>Kodland</strong> · разработчик: <strong>Andrei Pabiarzhyn</strong> · © 2025
+    Made with ❤️ for <strong>Kodland</strong> · developer: <strong>Andrei Pabiarzhyn</strong> · © 2025
   </footer>
 
   <!-- Скрипты -->
