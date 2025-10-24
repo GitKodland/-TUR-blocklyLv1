@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rabbit Run — Blockly</title>
+  <title>Tavşan Koşusu — Blockly</title>
   <link rel="stylesheet" href="style.css" />
 
   <!-- Подключаем Blockly -->
@@ -11,15 +11,15 @@
 </head>
 <body>
   <header class="topbar">
-    <div class="brand">🐰 Rabbit Run</div>
+    <div class="brand">🐰 Tavşan Koşusu</div>
     <div class="level-info">
-      <button id="prevLevel" class="btn" title="Previous">◀</button>
-      <span id="levelTitle">Level 1/10</span>
-      <button id="nextLevel" class="btn" title="Next">▶</button>
+      <button id="prevLevel" class="btn" title="Önceki">◀</button>
+      <span id="levelTitle">Seviye 1/10</span>
+      <button id="nextLevel" class="btn" title="Sonraki">▶</button>
     </div>
     <div class="actions">
-      <button id="runBtn" class="btn primary">Launch ▶</button>
-      <button id="resetBtn" class="btn">Reset ⟲</button>
+      <button id="runBtn" class="btn primary">Çalıştır ▶</button>
+      <button id="resetBtn" class="btn">Sıfırla ⟲</button>
       <!-- <button id="hintBtn" class="btn outline">Подсказка 💡</button> -->
     </div>
   </header>
@@ -33,11 +33,11 @@
         <canvas id="fxCanvas"></canvas>
       </div>
       <div id="legend" class="legend">
-        <span>🐰 — rabbit</span>
-        <span>🚪 — exit</span>
-        <span>🥕 — carrot</span>
-        <span>🧱 — wall</span>
-        <span>▫️ — empty</span>
+        <span>🐰 — tavşan</span>
+        <span>🚪 — çıkış</span>
+        <span>🥕 — havuç</span>
+        <span>🧱 — duvar</span>
+        <span>▫️ — boş</span>
       </div>
       <div id="goal" class="goal"></div>
     </section>
@@ -45,19 +45,19 @@
     <!-- Правая часть — Blockly -->
     <section class="work-wrap">
       <div id="blockly" class="blockly"></div>
-      <div class="limit">Blocks used: <span id="used">0</span>/<span id="limit">0</span></div>
+      <div class="limit">Kullanılan bloklar: <span id="used">0</span>/<span id="limit">0</span></div>
     </section>
   </main>
 
   <!-- ✅ исправлено: закрыт тег dialog -->
   <dialog id="modal">
-    <h3 id="modalTitle">Hint</h3>
+    <h3 id="modalTitle">İpucu</h3>
     <div id="modalBody"></div>
     <div class="modal-actions"></div>
   </dialog>
 
   <footer class="footer">
-    Made with ❤️ for <strong>Kodland</strong> · developer: <strong>Andrei Pabiarzhyn</strong> · © 2025
+    <strong>Kodland</strong> için ❤️ ile yapıldı · geliştirici: <strong>Andrei Pabiarzhyn</strong> · © 2025
   </footer>
 
   <!-- Скрипты -->
