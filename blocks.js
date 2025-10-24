@@ -11,7 +11,7 @@ const toolboxXml = `
 // === Block "When launched" ===
 Blockly.Blocks['when_run'] = {
   init: function () {
-    this.appendDummyInput().appendField('When launched ▶');
+    this.appendDummyInput().appendField('Çalıştığında ▶');
     this.setColour('#4f46e5');
     this.setNextStatement(true, null);
     this.setDeletable(false);
@@ -37,19 +37,19 @@ function makeMoveBlock(type, label, dir) {
   };
 }
 
-makeMoveBlock('move_up', 'Move up ⬆️', 'up');
-makeMoveBlock('move_down', 'Move down ⬇️', 'down');
-makeMoveBlock('move_left', 'Move left ⬅️', 'left');
-makeMoveBlock('move_right', 'Move right ➡️', 'right');
+makeMoveBlock('move_up', 'Yukarı git ⬆️', 'up');
+makeMoveBlock('move_down', 'Aşağı git ⬇️', 'down');
+makeMoveBlock('move_left', 'Sola git ⬅️', 'left');
+makeMoveBlock('move_right', 'Sağa git ➡️', 'right');
 
 // === New block "Take a carrot" ===
 Blockly.Blocks['take_carrot'] = {
   init: function () {
-    this.appendDummyInput().appendField("Take 🥕");
+    this.appendDummyInput().appendField("Havucu al 🥕");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour('#f59e0b');
-    this.setTooltip("Take the carrot if you are standing on it.");
+    this.setTooltip("Eğer üzerindeyse havucu al.");
   }
 };
 Blockly.JavaScript['take_carrot'] = function (block) {
