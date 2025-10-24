@@ -9,10 +9,10 @@ const LEVELS_RABBIT = [
       "..R.W",
       ".W.WW"
     ],
-    goal: "Reach the 🚪 in 4 steps.",
+    goal: "4 adımda 🚪 kapısına ulaş.",
     maxBlocks: 15,
     needCarrots: false,
-    hint: "Go down and to the right."
+    hint: "Aşağı ve sağa git."
   },
   {
     size: 5,
@@ -23,10 +23,10 @@ const LEVELS_RABBIT = [
       ".WEW.",
       "WWWWW"
     ],
-    goal: "Reach the 🚪 while avoiding the walls.",
+    goal: "Duvarlardan kaçınarak 🚪 kapısına ulaş.",
     maxBlocks: 15,
     needCarrots: false,
-    hint: "Move around the walls in a zigzag."
+    hint: "Duvarların etrafından zikzak çizerek git."
   },
   {
     size: 5,
@@ -37,10 +37,10 @@ const LEVELS_RABBIT = [
       ".W.W.",
       "....E"
     ],
-    goal: "Reach the 🚪 through the maze.",
+    goal: "Labirentten geçerek 🚪 kapısına ulaş.",
     maxBlocks: 15,
     needCarrots: false,
-    hint: "Go down, then to the right."
+    hint: "Aşağı git, sonra sağa."
   },
   {
     size: 5,
@@ -51,10 +51,10 @@ const LEVELS_RABBIT = [
       ".W...",
       "...E."
     ],
-    goal: "Find a path to the 🚪.",
+    goal: "Kapıya 🚪 giden bir yol bul.",
     maxBlocks: 15,
     needCarrots: false,
-    hint: "Look for a route through the free cells."
+    hint: "Boş hücrelerden geçen bir rota ara."
   },
   {
     size: 5,
@@ -65,10 +65,10 @@ const LEVELS_RABBIT = [
       "W.W.W",
       "E...."
     ],
-    goal: "A tricky route to the 🚪.",
+    goal: "Kapıya 🚪 giden zorlu bir rota.",
     maxBlocks: 15,
     needCarrots: false,
-    hint: "Move in a zigzag down and to the left."
+    hint: "Aşağı ve sola doğru zikzak yaparak git."
   },
 
   // === 6–10: carrots + exit ===
@@ -81,10 +81,10 @@ const LEVELS_RABBIT = [
       ".W...",
       "..WWE"
     ],
-    goal: "Collect the 🥕 and reach the 🚪.",
+    goal: "Havucu 🥕 topla ve 🚪 kapısına ulaş.",
     maxBlocks: 15,
     needCarrots: true,
-    hint: "Don’t miss the carrot!"
+    hint: "Havucu kaçırma!"
   },
   {
     size: 5,
@@ -95,10 +95,10 @@ const LEVELS_RABBIT = [
       ".W.W.",
       "....E"
     ],
-    goal: "Collect all 🥕 and go to the 🚪.",
+    goal: "Tüm 🥕 havuçları topla ve 🚪 kapısına git.",
     maxBlocks: 15,
     needCarrots: true,
-    hint: "Go around the walls."
+    hint: "Duvarların etrafından dolaş."
   },
   {
     size: 5,
@@ -109,10 +109,10 @@ const LEVELS_RABBIT = [
       ".W.W.",
       "E...."
     ],
-    goal: "All 🥕 must be collected!",
+    goal: "Tüm 🥕 havuçlar toplanmalı!",
     maxBlocks: 15,
     needCarrots: true,
-    hint: "Carrots first, then the door."
+    hint: "Önce havuçlar, sonra kapı."
   },
   {
     size: 5,
@@ -123,10 +123,10 @@ const LEVELS_RABBIT = [
       "W.W..",
       "..E.."
     ],
-    goal: "Collect 🥕 and reach the 🚪.",
+    goal: "Havuçları 🥕 topla ve 🚪 kapısına ulaş.",
     maxBlocks: 15,
     needCarrots: true,
-    hint: "Find the shortest path to the carrots."
+    hint: "Havuçlara giden en kısa yolu bul."
   },
   {
     size: 5,
@@ -137,9 +137,9 @@ const LEVELS_RABBIT = [
       ".W.C.",
       "E...."
     ],
-    goal: "Final task: collect all 🥕 and reach the 🚪.",
+    goal: "Son görev: tüm 🥕 havuçları topla ve 🚪 kapısına ulaş.",
     maxBlocks: 15,
     needCarrots: true,
-    hint: "You’ll need to move in a zigzag."
+    hint: "Zikzak yapman gerekecek."
   }
 ];
